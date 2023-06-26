@@ -16,7 +16,7 @@ echo "nodogsplash built"
 CONFIG_FILE="/etc/nodogsplash/nodogsplash.conf"
 sed -i 's/^GatewayInterface.*/GatewayInterface new-interface/' "$CONFIG_FILE"
 echo "GatewayInterface wlan0" >> "$CONFIG_FILE"
-echo "GatewayAddress 10.3.141.1" >> "$CONFIG_FILE"
+echo "GatewayAddress 192.168.10.1" >> "$CONFIG_FILE"
 sudo cp ~/nodogsplash/debian/nodogsplash.service /lib/systemd/system/
 sudo systemctl enable nodogsplash.service 
 sudo systemctl start nodogsplash.service
