@@ -9,4 +9,5 @@ sudo sed -i 's/^interface=wlan0/#&\ninterface=wlan0\n\ndhcp-range=192.168.10.2,1
 # Allow access to devices on the main router at 192.168.0.*
 sudo sed -i 's/^#dhcp-option=3.*/dhcp-option=3,192.168.10.1/' /etc/dnsmasq.d/090_raspap.conf
 sudo sed -i 's/^#dhcp-option=6.*/dhcp-option=6,192.168.0.1/' /etc/dnsmasq.d/090_raspap.conf
+sudo sed -i 's/^bash \/usr\/wipi\/boot.sh$//' /etc/rc.local
 sudo cat /usr/wipi/boot.sh > /dev/null
