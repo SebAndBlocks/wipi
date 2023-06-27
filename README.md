@@ -1,5 +1,3 @@
-# WiPi
-###### The Wireless Tablet accesory powered by Pi
 ## Install
 ###### Basic:
 ```sh
@@ -9,10 +7,12 @@ sudo curl -sSL https://raw.githubusercontent.com/sebtnt/wipi/main/setup.sh | sud
 ```sh
 sudo curl -sSL https://raw.githubusercontent.com/sebtnt/wipi/main/setup-captive.sh | sudo bash
 ```
+###### Add --no-reboot to the end of the script to cancel the reboot.
 ## Wifi Connection
 ###### Connect to your wifi at MyWiPi_(4 digit code)
 ###### eg: MyWiPi_L8R5
 ###### Password: wipi-(4 digit code from SSID)
+###### PASSWORD IS LOWERCASE
 ###### eg: wipi-L8R5
 
 ## Portal Connection
