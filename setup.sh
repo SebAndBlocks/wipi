@@ -76,8 +76,6 @@ echo "conf-file=/etc/raspap/adblock/domains.txt" | sudo tee -a /etc/dnsmasq.d/09
 echo "addn-hosts=/etc/raspap/adblock/hostnames.txt" | sudo tee -a /etc/dnsmasq.d/090_adblock.conf > /dev/null
 sudo sed -i '/dhcp-option=6/d' /etc/dnsmasq.d/090_raspap.conf
 sudo sed -i "s/\('RASPI_ADBLOCK_ENABLED', \)false/\1true/g" includes/config.php
-sudo systemctl start raspapd.service
-sudo systemctl start hostapd
 echo "Step 2: Editing SSID and Password Settings for your RaspAP."
 # Specify the new WiFi broadcast settings
 rs=$(cat /dev/urandom | tr -dc 'A-Z0-9' | fold -w 4 | awk '{print substr($0,1,1) substr($0,2,1) substr($0,3,1) substr($0,4,1)}')
